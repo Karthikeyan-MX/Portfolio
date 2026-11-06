@@ -1,600 +1,869 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karthikeyan P M - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Karthikeyan P M — Mendix Advanced Certified Developer | Power Apps &amp; Power BI</title>
+    <meta name="description" content="Karthikeyan P M is a Bangalore-based Software Engineer at CUBE and Mendix Advanced Certified Developer building AI-powered RegTech SaaS and enterprise apps with Mendix, Power Apps and Power BI.">
+    <meta name="author" content="Karthikeyan P M">
+    <meta name="keywords" content="Karthikeyan P M, Mendix Developer, Mendix Advanced Certified, RegTech, CUBE, 4CRisk.ai, Power Apps Developer, Power BI Developer, Low-Code Developer, Bangalore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://karthikeyangitup.github.io/Portfolio/">
+
+    <!-- Theme colour (browser UI) -->
+    <meta name="theme-color" content="#0a0e1a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f7f8fc" media="(prefers-color-scheme: light)">
+
+    <!-- Open Graph / LinkedIn / WhatsApp previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://karthikeyangitup.github.io/Portfolio/">
+    <meta property="og:title" content="Karthikeyan P M — Mendix Advanced Certified Developer">
+    <meta property="og:description" content="Software Engineer at CUBE building AI-powered RegTech SaaS on Mendix. 4+ years of enterprise app development with Mendix, Power Apps and Power BI.">
+    <meta property="og:image" content="https://karthikeyangitup.github.io/Portfolio/assets/img/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Karthikeyan P M — Mendix Advanced Certified Developer">
+    <meta name="twitter:description" content="AI-powered RegTech SaaS and enterprise apps with Mendix, Power Apps and Power BI.">
+    <meta name="twitter:image" content="https://karthikeyangitup.github.io/Portfolio/assets/img/og-image.jpg">
+
+    <!-- Icons -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Apply saved theme before first paint (prevents a flash of the wrong theme) -->
+    <script>
+        (function () {
+            var t = null;
+            try { t = localStorage.getItem('theme'); } catch (e) {}
+            if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', t);
+            document.documentElement.classList.add('js');
+        })();
+    </script>
+
+    <!-- Fonts & icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="preload" as="image" href="assets/img/profile-640.webp" type="image/webp">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Structured data for search engines -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Karthikeyan P M",
+        "jobTitle": "Software Engineer — Mendix Advanced Certified Developer",
+        "worksFor": { "@type": "Organization", "name": "CUBE" },
+        "url": "https://karthikeyangitup.github.io/Portfolio/",
+        "image": "https://karthikeyangitup.github.io/Portfolio/assets/img/profile-640.jpg",
+        "email": "mailto:karthikeyanpmbe@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Bangalore", "addressRegion": "Karnataka", "addressCountry": "IN" },
+        "alumniOf": "Mahendra Institute of Technology",
+        "hasCredential": [
+            { "@type": "EducationalOccupationalCredential", "name": "Mendix Advanced Developer Certification", "identifier": "53718" },
+            { "@type": "EducationalOccupationalCredential", "name": "Mendix Intermediate Developer Certification", "identifier": "42485" },
+            { "@type": "EducationalOccupationalCredential", "name": "Mendix Rapid Developer Certification", "identifier": "35311" },
+            { "@type": "EducationalOccupationalCredential", "name": "Java with Selenium & Oracle — Greens Technology" }
+        ],
+        "knowsAbout": ["Mendix", "RegTech", "AI service integration", "Multi-tenant SaaS", "Microsoft Power Apps", "Microsoft Power BI", "Power Automate", "PostgreSQL", "REST APIs", "Java"],
+        "sameAs": ["https://www.linkedin.com/in/karthikeyan-pm-494761210"]
+    }
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar" class="navbar">
-        <div class="nav-container">
-            <img src="Advanced-min.png" alt="MendixLogo" class="mendix-logo" />
-            <div class="nav-logo">
-                <span class="gradient-text">Karthikeyan P M</span>
-            </div>
-            
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+        <div class="preloader-inner">
+            <span class="preloader-logo">&lt;K/&gt;</span>
+            <div class="preloader-bar"><span></span></div>
+            <code class="preloader-text">initializing portfolio…</code>
+        </div>
+    </div>
+
+    <!-- Scroll progress + ambient background -->
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+    <div class="bg-ambient" aria-hidden="true">
+        <div class="bg-grid"></div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <!-- 3D particle scene (rendered by scene3d.js; CSS background above is the fallback) -->
+    <div class="scene3d" id="scene3d" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+    <!-- ================= NAVIGATION ================= -->
+    <header class="navbar" id="navbar">
+        <nav class="nav-container" aria-label="Primary">
+            <a href="#home" class="brand" aria-label="Karthikeyan P M — home">
+                <img src="assets/img/mendix-advanced-badge.png" alt="" class="brand-badge" width="40" height="40">
+                <span class="brand-text">
+                    <span class="brand-name">Karthikeyan<span class="accent"> P M</span></span>
+                    <span class="brand-role">Mendix Advanced Developer</span>
+                </span>
+            </a>
+
             <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#tech-stack" class="nav-link">Tech Stack</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <button id="theme-toggle" class="theme-toggle">
-                    <i class="bx bx-moon" id="theme-icon"></i>
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-menu-footer">
+                    <a href="Karthikeyan_PM_AdvancedMendixDeveloper.pdf" class="btn btn-primary btn-block" download><i class="bx bx-download"></i> Download CV</a>
+                    <div class="nav-menu-social">
+                        <a href="https://www.linkedin.com/in/karthikeyan-pm-494761210" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                        <a href="mailto:karthikeyanpmbe@gmail.com" aria-label="Email"><i class="bx bx-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button class="icon-btn kbd-btn" id="palette-open" type="button" aria-label="Open command palette (Ctrl + K)">
+                    <i class="bx bx-search"></i><kbd class="kbd-hint"><span class="kbd-mod">Ctrl</span> K</kbd>
+                </button>
+                <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Toggle colour theme">
+                    <i class="bx bx-sun icon-sun"></i><i class="bx bx-moon icon-moon"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary btn-sm nav-cta">Let's talk</a>
+                <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span></span><span></span><span></span>
                 </button>
             </div>
-            
-            <div class="mobile-controls">
-                <button id="theme-toggle-mobile" class="theme-toggle">
-                    <i class="bx bx-moon" id="theme-icon-mobile"></i>
-                </button>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
+    <div class="nav-overlay" id="nav-overlay" hidden></div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text" data-aos="fade-right">
-                    <h3 class="hero-greeting">Hello, I'm</h3>
-                    <h1 class="hero-name">Karthikeyan P M</h1>
-                    <h3 class="hero-title">
-                        I'm a <span id="typed-text"></span>
-                    </h3>
-                    <p class="hero-description">
-                        A Mendix Advanced Certified Developer with expertise in Power Apps and Power BI, 
-                        I bring over 4 years of experience in building enterprise-grade web and mobile 
-                        applications, and crafting impactful data visualizations.
+    <main id="main">
+        <!-- ================= HERO ================= -->
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <div class="status-pill reveal">
+                        <span class="status-dot"></span><span>Software Engineer @ <strong>CUBE</strong> · AI RegTech</span>
+                    </div>
+                    <p class="hero-greeting reveal" data-delay="1"><span class="mono">~/</span> Hello, I'm</p>
+                    <h1 class="hero-name reveal" data-delay="2">
+                        <span class="split-text">Karthikeyan</span>
+                        <span class="split-text gradient-text">P M</span>
+                    </h1>
+                    <p class="hero-role reveal" data-delay="3">
+                        <span class="mono prompt">&gt;</span>
+                        <span class="typed" id="typed-text" aria-live="polite">Mendix Advanced Developer</span><span class="typed-caret" aria-hidden="true"></span>
                     </p>
-                    
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/karthikeyan-pm-494761210" target="_blank" class="social-link linkedin">
-                            <i class="bx bxl-linkedin"></i>
+                    <p class="hero-description reveal" data-delay="4">
+                        Mendix Advanced Certified engineer building <strong>AI-powered RegTech SaaS</strong> at CUBE —
+                        secure, multi-tenant apps for compliance teams — with a background in enterprise
+                        <strong>Mendix</strong>, <strong>Power Apps</strong> and <strong>Power BI</strong> solutions.
+                    </p>
+
+                    <div class="hero-buttons reveal" data-delay="5">
+                        <a href="#projects" class="btn btn-primary magnetic">
+                            View my work <i class="bx bx-right-arrow-alt"></i>
                         </a>
-                        <a href="https://wa.me/916380538769" target="_blank" class="social-link whatsapp">
-                            <i class="bx bxl-whatsapp"></i>
-                        </a>
-                    </div>
-                    
-                    <div class="hero-buttons">
-                        <a href="#about" class="btn btn-primary">More About Me</a>
-                        <a href="Karthikeyan_PM_MendixProfile.pdf" download="Karthikeyan_PM_MendixProfile" class="btn btn-secondary">
-                            <i class="bx bx-download"></i>
-                            Download CV
+                        <a href="Karthikeyan_PM_AdvancedMendixDeveloper.pdf" class="btn btn-ghost magnetic" download="Karthikeyan_PM_AdvancedMendixDeveloper.pdf">
+                            <i class="bx bx-download"></i> Download CV
                         </a>
                     </div>
-                </div>
-                
-                <div class="hero-image" data-aos="fade-left">
-                    <div class="profile-container">
-                        <div class="profile-image">
-                            <img src="karthikeyanpm.jpg" alt="Karthikeyan P M">
-                        
-                        </div>
-                        <div class="floating-icon mendix">
-                            <i class="bx bx-code-alt"></i>
-                        </div>
-                        <div class="floating-icon microsoft">
-                            <i class="bx bxl-microsoft"></i>
-                        </div>
+
+                    <div class="hero-social reveal" data-delay="6">
+                        <a href="https://www.linkedin.com/in/karthikeyan-pm-494761210" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn profile"><i class="bx bxl-linkedin"></i></a>
+                        <a href="https://wa.me/916380538769" target="_blank" rel="noopener" class="social-link" aria-label="Chat on WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+                        <a href="mailto:karthikeyanpmbe@gmail.com" class="social-link" aria-label="Send an email"><i class="bx bx-envelope"></i></a>
+                        <span class="social-divider" aria-hidden="true"></span>
+                        <span class="hero-location"><i class="bx bx-map"></i> Bangalore, India</span>
                     </div>
                 </div>
+
+                <div class="hero-visual reveal" data-delay="2">
+                    <div class="avatar-wrap tilt" data-tilt-max="8">
+                        <div class="avatar-ring" aria-hidden="true"></div>
+                        <div class="avatar-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+                        <picture>
+                            <source srcset="assets/img/profile-640.webp" type="image/webp">
+                            <img src="assets/img/profile-640.jpg" alt="Portrait of Karthikeyan P M" class="avatar-img" width="640" height="640" fetchpriority="high">
+                        </picture>
+
+                        <div class="float-card fc-1">
+                            <img src="assets/img/mendix-advanced-badge.png" alt="" width="36" height="36">
+                            <div><strong>Mendix</strong><span>Advanced Certified</span></div>
+                        </div>
+                        <div class="float-card fc-2">
+                            <span class="fc-icon pa"><i class="bx bxl-microsoft"></i></span>
+                            <div><strong>Power Apps</strong><span>Canvas &amp; model-driven</span></div>
+                        </div>
+                        <div class="float-card fc-3">
+                            <span class="fc-icon bi"><i class="bx bx-bar-chart-alt-2"></i></span>
+                            <div><strong>Power BI</strong><span>DAX &amp; dashboards</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick metrics -->
+            <div class="container">
+                <ul class="metrics reveal" data-delay="3">
+                    <li class="metric">
+                        <span class="metric-value"><span class="counter" id="years-counter" data-target="4">4</span>+</span>
+                        <span class="metric-label">Years of experience</span>
+                    </li>
+                    <li class="metric">
+                        <span class="metric-value"><span class="counter" data-target="4">4</span></span>
+                        <span class="metric-label">Certifications</span>
+                    </li>
+                    <li class="metric">
+                        <span class="metric-value"><span class="counter" data-target="6">6</span></span>
+                        <span class="metric-label">Featured projects</span>
+                    </li>
+                    <li class="metric">
+                        <span class="metric-value"><span class="counter" data-target="12">12</span>+</span>
+                        <span class="metric-label">Search Portal modules</span>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="#about" class="scroll-cue" aria-label="Scroll to About section"><span></span></a>
+        </section>
+
+        <!-- Tech marquee -->
+        <div class="marquee" aria-label="Technologies I work with">
+            <div class="marquee-track">
+                <ul class="marquee-list">
+                    <li><i class="bx bx-brain"></i> AI / SLM services</li>
+                    <li><i class="bx bx-shield-quarter"></i> Multi-tenant SaaS</li>
+                    <li><i class="bx bx-code-alt"></i> Mendix Studio Pro</li>
+                    <li><i class="bx bxl-microsoft"></i> Power Apps</li>
+                    <li><i class="bx bx-bar-chart-alt-2"></i> Power BI</li>
+                    <li><i class="bx bx-sync"></i> Power Automate</li>
+                    <li><i class="bx bxl-postgresql"></i> PostgreSQL</li>
+                    <li><i class="bx bx-transfer"></i> REST APIs</li>
+                    <li><i class="bx bxl-java"></i> Java</li>
+                    <li><i class="bx bxl-javascript"></i> JavaScript</li>
+                    <li><i class="bx bxl-git"></i> Git</li>
+                    <li><i class="bx bx-data"></i> Dataverse</li>
+                    <li><i class="bx bx-line-chart"></i> Apache ECharts</li>
+                </ul>
+                <ul class="marquee-list" aria-hidden="true">
+                    <li><i class="bx bx-brain"></i> AI / SLM services</li>
+                    <li><i class="bx bx-shield-quarter"></i> Multi-tenant SaaS</li>
+                    <li><i class="bx bx-code-alt"></i> Mendix Studio Pro</li>
+                    <li><i class="bx bxl-microsoft"></i> Power Apps</li>
+                    <li><i class="bx bx-bar-chart-alt-2"></i> Power BI</li>
+                    <li><i class="bx bx-sync"></i> Power Automate</li>
+                    <li><i class="bx bxl-postgresql"></i> PostgreSQL</li>
+                    <li><i class="bx bx-transfer"></i> REST APIs</li>
+                    <li><i class="bx bxl-java"></i> Java</li>
+                    <li><i class="bx bxl-javascript"></i> JavaScript</li>
+                    <li><i class="bx bxl-git"></i> Git</li>
+                    <li><i class="bx bx-data"></i> Dataverse</li>
+                    <li><i class="bx bx-line-chart"></i> Apache ECharts</li>
+                </ul>
             </div>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="about-container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
-                <div class="section-divider"></div>
-            </div>
-            
-            <div class="about-content">
-                <div class="about-image" data-aos="fade-right">
-                    <div class="image-container">
-                        <img src="karthikeyanpm.jpg" alt="">
-                    </div>
-                </div>
-                
-                <div class="about-text" data-aos="fade-left">
-                    <h4 class="about-subtitle">
-                        Low-Code Developer | Mendix Advanced Certified | Power Platform & BI Specialist
-                    </h4>
-                    
-                    <div class="about-description">
-                        <p>
-                            I'm Karthikeyan P M, a Software Engineer based in Chennai, Tamil Nadu, India, 
-                            with over 3 years of experience in low-code and business intelligence solutions. 
-                            I hold a Bachelor's degree in Electronics and Communication Engineering from 
-                            Mahendra Institute of Technology.
+        <!-- ================= ABOUT ================= -->
+        <section id="about" class="section">
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="section-kicker">01 · about</span>
+                    <h2 class="section-title">Engineer first, <span class="gradient-text">low-code by choice</span></h2>
+                </header>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p class="lead reveal">
+                            I'm a Software Engineer at <strong>CUBE</strong> in Bangalore with <span class="js-years">4+</span> years of experience
+                            building enterprise and SaaS applications on Mendix. I work on <strong>Search Portal</strong> — 4CRisk.ai's
+                            AI-driven RegTech platform — building modules such as Regulatory Research, Rule Books, Obligations,
+                            Compliance Maps, Regulatory Change Management and GRC Uploads.
                         </p>
-                        
-                        <p>
-                            As a <strong>Mendix Advanced Certified Developer</strong>, 
-                            I design and develop secure, scalable web and mobile applications using Mendix Studio Pro. 
-                            My expertise includes workflow automation, REST API integration, SSO implementation, 
-                            and dynamic UI development.
+                        <p class="reveal" data-delay="1">
+                            I joined via <strong>4CRisk.ai</strong>, which CUBE acquired in Feb 2026. Before that I spent three and a half years at
+                            <strong>Intelizign Lifecycle Services</strong>, building Mendix workflow apps and delivering
+                            <strong>Power Apps</strong> and <strong>Power BI</strong> solutions for <strong>Daimler India Commercial Vehicles</strong>.
                         </p>
-                        
-                        <p>
-                            I also build custom business applications using <strong>Microsoft Power Apps</strong> 
-                            and deliver interactive dashboards and data visualizations through <strong>Power BI</strong>—helping 
-                            organizations make informed, data-driven decisions.
+                        <p class="reveal" data-delay="2">
+                            My strengths are domain modelling, microflow architecture, REST and AI service integrations, multi-tenant security
+                            and data-heavy dashboards. I own features end to end, review code carefully, and work closely with product owners in Agile sprints.
                         </p>
-                    </div>
-                    
-                    <div class="stats">
-                        <div class="stat-item">
-                            <div class="stat-number">3+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">50+</div>
-                            <div class="stat-label">Projects Completed</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">15+</div>
-                            <div class="stat-label">Happy Clients</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="about-container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">My <span class="gradient-text">Services</span></h2>
-                <div class="section-divider"></div>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <i class="bx bx-code-alt"></i>
+                        <ul class="info-grid reveal" data-delay="3">
+                            <li><i class="bx bx-briefcase"></i><div><span>Current role</span><strong>Software Engineer · CUBE</strong></div></li>
+                            <li><i class="bx bx-map"></i><div><span>Location</span><strong>Bangalore, India</strong></div></li>
+                            <li><i class="bx bxs-graduation"></i><div><span>Education</span><strong>B.E. — ECE, 2021</strong></div></li>
+                            <li><i class="bx bx-badge-check"></i><div><span>Certifications</span><strong>Mendix Advanced + 3 more</strong></div></li>
+                        </ul>
                     </div>
-                    <h3>Mendix Development</h3>
-                    <p>
-                        I develop scalable web and mobile applications using Mendix, ensuring fast and efficient 
-                        low-code solutions. From data modeling to microflows, I create business-driven applications 
-                        that integrate seamlessly with third-party systems.
-                    </p>
-                    <a href="#" class="service-link">Learn More →</a>
-                </div>
-                
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="bx bx-bar-chart-alt-2"></i>
-                    </div>
-                    <h3>PowerBI Development</h3>
-                    <p>
-                        I design powerful dashboards and reports using Power BI to transform raw data 
-                        into meaningful insights. My expertise includes data modeling, DAX calculations, 
-                        and advanced visualizations.
-                    </p>
-                    <a href="#" class="service-link">Learn More →</a>
-                </div>
-                
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="bx bxl-microsoft"></i>
-                    </div>
-                    <h3>PowerApps Development</h3>
-                    <p>
-                        I create custom business applications using PowerApps, enabling organizations 
-                        to automate processes and improve efficiency. My expertise includes canvas apps, 
-                        model-driven apps, and Power Automate workflows.
-                    </p>
-                    <a href="#" class="service-link">Learn More →</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Tech Stack Section -->
-    <section id="tech-stack" class="tech-stack">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Tech <span class="gradient-text">Stack</span></h2>
-                <div class="section-divider"></div>
-                <p class="section-description">Technologies and tools I use to bring ideas to life</p>
-            </div>
-            
-            <div class="tech-categories">
-                <div class="tech-category" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="category-title">Low-Code Platforms</h3>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <div class="tech-icon mendix">
-                                <span class="mendix-text">mx</span>
-                            </div>
-                            <span>Mendix</span>
+                    <!-- Code window -->
+                    <div class="code-window reveal tilt spotlight" data-delay="2" data-tilt-max="4">
+                        <div class="code-head">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                            <span class="code-file"><i class="bx bxl-typescript"></i> developer.ts</span>
+                            <button class="code-copy" type="button" aria-label="Copy code" data-copy-target="code-snippet"><i class="bx bx-copy"></i></button>
                         </div>
-                        <div class="tech-item">
-                            <div class="tech-icon microsoft">
-                                <i class="bx bxl-microsoft"></i>
-                            </div>
-                            <span>Power Apps</span>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon powerbi">
-                                <i class="bx bx-bar-chart-alt-2"></i>
-                            </div>
-                            <span>Power BI</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="tech-category" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="category-title">Programming Languages</h3>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <div class="tech-icon javascript">
-                                <i class="bx bxl-javascript"></i>
-                            </div>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon python">
-                                <i class="bx bxl-python"></i>
-                            </div>
-                            <span>Python</span>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon java">
-                                <i class="bx bxl-java"></i>
-                            </div>
-                            <span>Java</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="tech-category" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="category-title">Databases & Tools</h3>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <div class="tech-icon postgresql">
-                                <i class="bx bx-data"></i>
-                            </div>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon git">
-                                <i class="bx bxl-git"></i>
-                            </div>
-                            <span>Git</span>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon react">
-                                <i class="bx bxl-react"></i>
-                            </div>
-                            <span>React</span>
-                        </div>
+<pre class="code-body" id="code-snippet"><code><span class="ln"><span class="kw">const</span> <span class="var">developer</span> = {</span><span class="ln">  <span class="prop">name</span>: <span class="str">"Karthikeyan P M"</span>,</span><span class="ln">  <span class="prop">role</span>: <span class="str">"Software Engineer"</span>,</span><span class="ln">  <span class="prop">company</span>: <span class="str">"CUBE"</span>,</span><span class="ln">  <span class="prop">location</span>: <span class="str">"Bangalore, IN"</span>,</span><span class="ln">  <span class="prop">experience</span>: <span class="num js-years-num">4</span>, <span class="cm">// years, since 2022</span></span><span class="ln">  <span class="prop">certified</span>: [<span class="str">"Rapid"</span>, <span class="str">"Intermediate"</span>, <span class="str">"Advanced"</span>],</span><span class="ln">  <span class="prop">stack</span>: [<span class="str">"Mendix"</span>, <span class="str">"Java"</span>, <span class="str">"Power Platform"</span>],</span><span class="ln">  <span class="prop">project</span>: <span class="str">"Search Portal"</span>,</span><span class="ln">  <span class="prop">modules</span>: [<span class="str">"Compliance Map"</span>, <span class="str">"Rule Book"</span>, <span class="str">"RCM"</span>, <span class="cm">/* +9 */</span>],</span><span class="ln">  <span class="prop">aiPowered</span>: <span class="bool">true</span>,</span><span class="ln">};</span><span class="ln"></span><span class="ln"><span class="var">developer</span>.<span class="fn">build</span>(<span class="str">"your next app"</span>); <span class="cm">// ship it</span></span></code></pre>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
-                <div class="section-divider"></div>
-            </div>
-            
-            <div class="skills-content">
-                <div class="technical-skills" data-aos="fade-right">
-                    <h3>Technical Skills</h3>
-                    <div class="skill-bars">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>Mendix</span>
-                                <span>98%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="98"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>PostgreSQL</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="90"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>Microsoft PowerApps</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="90"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>Microsoft PowerBI</span>
-                                <span>95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="95"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>JavaScript</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="90"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="professional-skills" data-aos="fade-left">
-                    <h3>Professional Skills</h3>
-                    <div class="radial-skills">
-                         <div class="radial-skill">
-                            <div class="radial-chart" data-percentage="95">
-                                <svg>
-                                    <circle cx="70" cy="70" r="60"></circle>
-                                    <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
-                                </svg>
-                                <div class="percentage">95%</div>
-                            </div>
-                            <span>Agile Methodologies</span>
-                        </div>
-                        <div class="radial-skill">
-                            <div class="radial-chart" data-percentage="95">
-                                <svg>
-                                    <circle cx="70" cy="70" r="60"></circle>
-                                    <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
-                                </svg>
-                                <div class="percentage">95%</div>
-                            </div>
-                            <span>Analytical Thinking</span>
-                        </div>
-                        
-                        <div class="radial-skill">
-                            <div class="radial-chart" data-percentage="95">
-                                <svg>
-                                    <circle cx="70" cy="70" r="60"></circle>
-                                    <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
-                                </svg>
-                                <div class="percentage">95%</div>
-                            </div>
-                            <span>Communication</span>
-                        </div>
-                        
-                        <div class="radial-skill">
-                            <div class="radial-chart" data-percentage="95">
-                                <svg>
-                                    <circle cx="70" cy="70" r="60"></circle>
-                                    <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
-                                </svg>
-                                <div class="percentage">95%</div>
-                            </div>
-                            <span>Project Management</span>
-                        </div>
-                        
-                        <div class="radial-skill">
-                            <div class="radial-chart" data-percentage="95">
-                                <svg>
-                                    <circle cx="70" cy="70" r="60"></circle>
-                                    <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
-                                </svg>
-                                <div class="percentage">95%</div>
-                            </div>
-                            <span>Team Leadership</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- ================= EXPERIENCE ================= -->
+        <section id="experience" class="section section-alt">
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="section-kicker">02 · experience</span>
+                    <h2 class="section-title">Where I've <span class="gradient-text">built things</span></h2>
+                </header>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="about-container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Latest <span class="gradient-text">Projects</span></h2>
-                <div class="section-divider"></div>
-            </div>
-            
-            <div class="projects-grid">
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-icon">
-                        <i class="bx bx-briefcase-alt-2"></i>
-                    </div>
-                    <h3>I Manage</h3>
-                    <p>
-                        Developed a Mendix-based project and resource management system to efficiently allocate 
-                        employees to projects and delivery groups. Integrated cost and revenue tracking for financial insights.
-                    </p>
-                    <a href="#" class="project-link">Learn More →</a>
-                </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-icon">
-                        <i class="bx bx-shield-quarter"></i>
-                    </div>
-                    <h3>Delegation of Authority (DOA)</h3>
-                    <p>
-                        Built a Mendix application to manage approval workflows for sensitive documents. 
-                        Employees can submit approval requests, which are reviewed and escalated to higher authorities.
-                    </p>
-                    <a href="#" class="project-link">Learn More →</a>
-                </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-icon">
-                        <i class="bx bx-user-plus"></i>
-                    </div>
-                    <h3>SWIFT-VOB (Vendor OnBoarding)</h3>
-                    <p>
-                        Created a Mendix-based system to handle VOB requests with automated workflows for CDMM, PCM, 
-                        and SSU roles. Developed dynamic forms and multi-document upload functionality.
-                    </p>
-                    <a href="#" class="project-link">Learn More →</a>
-                </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="project-icon">
-                        <i class="bx bx-network-chart"></i>
-                    </div>
-                    <h3>NPM Planning Tool</h3>
-                    <p>
-                        Developed a Network Planning & Maintenance tool using PowerApps to digitize and automate 
-                        the planning process. Implemented workflow automation with Power Automate.
-                    </p>
-                    <a href="#" class="project-link">Learn More →</a>
-                </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="project-icon">
-                        <i class="bx bx-line-chart"></i>
-                    </div>
-                    <h3>Series Referencing Dashboard</h3>
-                    <p>
-                        Designed an interactive Power BI dashboard to analyze and track product series references. 
-                        Integrated data from various sources and performed advanced calculations using DAX.
-                    </p>
-                    <a href="#" class="project-link">Learn More →</a>
-                </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="project-icon">
-                        <i class="bx bx-sitemap"></i>
-                    </div>
-                    <h3>CE Org Chart</h3>
-                    <p>
-                        Built an interactive organizational chart in PowerApps for Daimler, displaying employee 
-                        hierarchy and reporting structures. Integrated with Dataverse and SharePoint.
-                    </p>
-                    <a href="#" class="project-link">Learn More →</a>
-                </div>
-            </div>
-        </div>
-    </section>
+                <ol class="timeline" id="timeline">
+                    <li class="timeline-line" aria-hidden="true"><span class="timeline-progress" id="timeline-progress"></span></li>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
-                <div class="section-divider"></div>
-                <p class="section-description">Let's work together to bring your ideas to life</p>
+                    <!-- CUBE / 4CRisk.ai -->
+                    <li class="timeline-item reveal">
+                        <span class="timeline-dot"><i class="bx bx-buildings"></i></span>
+                        <article class="timeline-card spotlight">
+                            <div class="timeline-meta">
+                                <span class="timeline-date"><i class="bx bx-time-five"></i> Sep 2025 — Present</span>
+                                <span class="chip chip-live"><span class="status-dot"></span> Current</span>
+                            </div>
+                            <h3>CUBE <span class="org-note">(acquired 4CRisk.ai, Feb 2026)</span></h3>
+                            <p class="timeline-org"><i class="bx bx-map"></i> Bangalore, India · AI-driven RegTech SaaS for regulatory research, change management and compliance mapping</p>
+
+                            <ol class="role-steps">
+                                <li class="role-step current">
+                                    <strong>Software Engineer — CUBE</strong>
+                                    <span>Apr 2026 – Present</span>
+                                </li>
+                                <li class="role-step">
+                                    <strong>Software Developer — 4CRisk.ai</strong>
+                                    <span>Sep 2025 – Mar 2026</span>
+                                </li>
+                            </ol>
+
+                            <div class="client-callout project-callout">
+                                <i class="bx bx-search-alt"></i>
+                                <div><span>Project</span><strong>Search Portal</strong><em>4CRisk.ai's AI RegTech platform (now part of CUBE). Everything below is a module of this one product.</em></div>
+                            </div>
+
+                            <ul class="check-list">
+                                <li><strong>Regulatory Research:</strong> search across regulators, laws and standards with keyword and exact-phrase search, AI Smart Search, faceted and saved filters, and rule-book creation directly from search results.</li>
+                                <li><strong>Regulatory Change Management:</strong> configurable five-stage alert workflow (Scoping → Completed) with triage assignment, collaborator approvals and auto-linking of related alerts.</li>
+                                <li><strong>Compliance Map &amp; Impact Assessment:</strong> Sankey traceability maps with editable AI mappings and explainability, plus a dashboard showing how new regulations affect rule books and obligations.</li>
+                                <li><strong>GRC Uploads:</strong> bulk Excel import with dynamic attribute mapping, and AI-parsed policy PDF ingestion with confidence scoring and a review flow.</li>
+                                <li><strong>Security &amp; delivery:</strong> role-based and organisation-level access with tenant data segregation; I own features end to end in Agile sprints with peer code reviews.</li>
+                            </ul>
+
+                            <p class="module-label">Search Portal modules I've worked on</p>
+                            <div class="module-cloud">
+                                <span>Reg Research</span><span>Rule Book</span><span>Obligations</span><span>Compliance Map</span><span>Unified Compliance Map</span><span>Impact Assessment</span><span>RCM</span><span>GRC Upload</span><span>Controls</span><span>Control Objectives</span><span>Policies</span><span>Risks</span><span>Issues</span>
+                            </div>
+                            <div class="tag-row">
+                                <span class="tag">Mendix</span><span class="tag">AI / SLM services</span><span class="tag">Multi-tenancy</span><span class="tag">REST &amp; JSON</span><span class="tag">Sankey</span><span class="tag">Agile / Scrum</span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <!-- Intelizign -->
+                    <li class="timeline-item reveal">
+                        <span class="timeline-dot"><i class="bx bx-briefcase"></i></span>
+                        <article class="timeline-card spotlight">
+                            <div class="timeline-meta">
+                                <span class="timeline-date"><i class="bx bx-time-five"></i> Mar 2022 — Aug 2025</span>
+                            </div>
+                            <h3>Software Engineer</h3>
+                            <p class="timeline-org"><i class="bx bx-map"></i> Intelizign Lifecycle Services Pvt. Ltd. · Chennai, India</p>
+                            <div class="client-callout">
+                                <i class="bx bxs-truck"></i>
+                                <div><span>Client engagement</span><strong>Daimler India Commercial Vehicles (DICV)</strong><em>All my Power Apps and Power BI projects were delivered for DICV.</em></div>
+                            </div>
+                            <ul class="check-list">
+                                <li><strong>I-Manage (resource management):</strong> designed project and resource allocation with cost and revenue analysis and Apache ECharts dashboards for leadership.</li>
+                                <li><strong>Delegation of Authority:</strong> delivered document-approval and delegation workflows with request tracking and reviewer comments.</li>
+                                <li><strong>Power Platform for DICV:</strong> NPM Planning Tool and CE Org Chart (Power Apps + Power Automate) and the Series Referencing Dashboard (Power BI, DAX).</li>
+                                <li>REST API integrations, SSO, reusable modules, clean Git history and peer code reviews.</li>
+                            </ul>
+                            <div class="tag-row">
+                                <span class="tag">Mendix</span><span class="tag">Power Apps</span><span class="tag">Power Automate</span><span class="tag">Power BI</span><span class="tag">REST</span><span class="tag">SSO</span><span class="tag">PostgreSQL</span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="timeline-item reveal">
+                        <span class="timeline-dot"><i class="bx bxs-graduation"></i></span>
+                        <article class="timeline-card spotlight">
+                            <div class="timeline-meta">
+                                <span class="timeline-date"><i class="bx bx-time-five"></i> Graduated May 2021</span>
+                            </div>
+                            <h3>B.E. Electronics &amp; Communication Engineering</h3>
+                            <p class="timeline-org">Mahendra Institute of Technology · Namakkal</p>
+                            <p class="timeline-desc">Engineering foundation in systems thinking and problem solving that I now apply to building business software.</p>
+                        </article>
+                    </li>
+                </ol>
             </div>
-            
-            <div class="contact-content">
-                <div class="contact-info" data-aos="fade-right">
-                    <h3>Let's Work Together</h3>
-                    <p>
-                        I'd love to hear from you! Whether you have a question, want to discuss a project, 
-                        or just want to connect, feel free to reach out to me.
-                    </p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="bx bx-envelope"></i>
+        </section>
+
+        <!-- ================= SKILLS ================= -->
+        <section id="skills" class="section">
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="section-kicker">03 · skills</span>
+                    <h2 class="section-title">Tools of the <span class="gradient-text">trade</span></h2>
+                    <p class="section-sub">Levels are honest self-assessments, backed by certifications and shipped projects.</p>
+                </header>
+
+                <div class="skill-legend reveal" aria-hidden="true">
+                    <span><i class="lvl lvl-3"><b></b><b></b><b></b></i> Expert</span>
+                    <span><i class="lvl lvl-2"><b></b><b></b><b></b></i> Advanced</span>
+                    <span><i class="lvl lvl-1"><b></b><b></b><b></b></i> Proficient</span>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card spotlight reveal" data-delay="1">
+                        <div class="skill-card-head"><span class="skill-icon"><i class="bx bx-layer"></i></span><h3>Mendix Platform</h3></div>
+                        <ul class="skill-list">
+                            <li><span>Studio Pro · Domain Model</span><i class="lvl lvl-3" title="Expert"><b></b><b></b><b></b></i></li>
+                            <li><span>Microflows · Nanoflows</span><i class="lvl lvl-3" title="Expert"><b></b><b></b><b></b></i></li>
+                            <li><span>Workflows</span><i class="lvl lvl-3" title="Expert"><b></b><b></b><b></b></i></li>
+                            <li><span>XPath · OQL</span><i class="lvl lvl-2" title="Advanced"><b></b><b></b><b></b></i></li>
+                            <li><span>Atlas UI · Marketplace modules</span><i class="lvl lvl-2" title="Advanced"><b></b><b></b><b></b></i></li>
+                            <li><span>Java &amp; JavaScript actions</span><i class="lvl lvl-2" title="Advanced"><b></b><b></b><b></b></i></li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card spotlight reveal" data-delay="2">
+                        <div class="skill-card-head"><span class="skill-icon"><i class="bx bx-lock-alt"></i></span><h3>Integration &amp; Security</h3></div>
+                        <ul class="skill-list">
+                            <li><span>REST APIs · JSON mappings</span><i class="lvl lvl-3" title="Expert"><b></b><b></b><b></b></i></li>
+                            <li><span>SSO</span><i class="lvl lvl-2" title="Advanced"><b></b><b></b><b></b></i></li>
+                            <li><span>Module roles &amp; entity access</span><i class="lvl lvl-3" title="Expert"><b></b><b></b><b></b></i></li>
+                            <li><span>Multi-tenancy &amp; data segregation</span><i class="lvl lvl-2" title="Advanced"><b></b><b></b><b></b></i></li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card spotlight reveal" data-delay="1">
+                        <div class="skill-card-head"><span class="skill-icon"><i class="bx bxl-microsoft"></i></span><h3>Microsoft Power Platform</h3></div>
+                        <ul class="skill-list">
+                            <li><span>Power Apps (canvas)</span><i class="lvl lvl-2" title="Advanced"><b></b><b></b><b></b></i></li>
+                            <li><span>Power Automate</span><i class="lvl lvl-2" title="Advanced"><b></b><b></b><b></b></i></li>
+                            <li><span>Power BI · DAX</span><i class="lvl lvl-2" title="Advanced"><b></b><b></b><b></b></i></li>
+                            <li><span>Dataverse · SharePoint</span><i class="lvl lvl-1" title="Proficient"><b></b><b></b><b></b></i></li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card spotlight reveal" data-delay="2">
+                        <div class="skill-card-head"><span class="skill-icon"><i class="bx bx-code-curly"></i></span><h3>Engineering &amp; Data</h3></div>
+                        <ul class="skill-list">
+                            <li><span>Java</span><i class="lvl lvl-2" title="Advanced"><b></b><b></b><b></b></i></li>
+                            <li><span>PostgreSQL · SQL</span><i class="lvl lvl-2" title="Advanced"><b></b><b></b><b></b></i></li>
+                            <li><span>HTML5 · CSS / SCSS</span><i class="lvl lvl-2" title="Advanced"><b></b><b></b><b></b></i></li>
+                            <li><span>Apache ECharts</span><i class="lvl lvl-2" title="Advanced"><b></b><b></b><b></b></i></li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card spotlight reveal" data-delay="3">
+                        <div class="skill-card-head"><span class="skill-icon"><i class="bx bx-git-branch"></i></span><h3>Delivery &amp; Tooling</h3></div>
+                        <ul class="skill-list">
+                            <li><span>Agile / Scrum</span><i class="lvl lvl-2" title="Advanced"><b></b><b></b><b></b></i></li>
+                            <li><span>Git · peer code reviews</span><i class="lvl lvl-2" title="Advanced"><b></b><b></b><b></b></i></li>
+                            <li><span>Mendix Cloud deployments</span><i class="lvl lvl-2" title="Advanced"><b></b><b></b><b></b></i></li>
+                            <li><span>Postman · VS Code</span><i class="lvl lvl-2" title="Advanced"><b></b><b></b><b></b></i></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SERVICES ================= -->
+        <section id="services" class="section section-alt">
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="section-kicker">04 · services</span>
+                    <h2 class="section-title">What I can <span class="gradient-text">build for you</span></h2>
+                </header>
+
+                <div class="services-grid">
+                    <article class="service-card spotlight gradient-border reveal" data-delay="1">
+                        <span class="service-num">01</span>
+                        <div class="service-icon"><i class="bx bx-code-alt"></i></div>
+                        <h3>Mendix Development</h3>
+                        <p>Scalable web, mobile and multi-tenant SaaS apps — from domain model to deployment — that integrate cleanly with your systems and AI services.</p>
+                        <ul class="mini-list">
+                            <li><i class="bx bx-check"></i> Domain modelling, microflows &amp; workflows</li>
+                            <li><i class="bx bx-check"></i> AI service &amp; REST integrations, SSO</li>
+                            <li><i class="bx bx-check"></i> Role, org &amp; tenant-level security</li>
+                        </ul>
+                        <a href="#contact" class="text-link" data-subject="Mendix development enquiry">Discuss a Mendix project <i class="bx bx-right-arrow-alt"></i></a>
+                    </article>
+
+                    <article class="service-card spotlight gradient-border reveal" data-delay="2">
+                        <span class="service-num">02</span>
+                        <div class="service-icon"><i class="bx bxl-microsoft"></i></div>
+                        <h3>Power Apps &amp; Automate</h3>
+                        <p>Custom business apps that digitise paper and spreadsheet processes and automate the busywork around them.</p>
+                        <ul class="mini-list">
+                            <li><i class="bx bx-check"></i> Canvas &amp; model-driven apps</li>
+                            <li><i class="bx bx-check"></i> Power Automate flows</li>
+                            <li><i class="bx bx-check"></i> Dataverse &amp; SharePoint</li>
+                        </ul>
+                        <a href="#contact" class="text-link" data-subject="Power Apps enquiry">Discuss a Power Apps project <i class="bx bx-right-arrow-alt"></i></a>
+                    </article>
+
+                    <article class="service-card spotlight gradient-border reveal" data-delay="3">
+                        <span class="service-num">03</span>
+                        <div class="service-icon"><i class="bx bx-bar-chart-alt-2"></i></div>
+                        <h3>Power BI Dashboards</h3>
+                        <p>Interactive reports that turn raw data from many sources into insights people actually use.</p>
+                        <ul class="mini-list">
+                            <li><i class="bx bx-check"></i> Data modelling &amp; DAX</li>
+                            <li><i class="bx bx-check"></i> Multi-source integration</li>
+                            <li><i class="bx bx-check"></i> Executive &amp; operational views</li>
+                        </ul>
+                        <a href="#contact" class="text-link" data-subject="Power BI enquiry">Discuss a dashboard <i class="bx bx-right-arrow-alt"></i></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROJECTS ================= -->
+        <section id="projects" class="section">
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="section-kicker">05 · projects</span>
+                    <h2 class="section-title">Selected <span class="gradient-text">work</span></h2>
+                    <p class="section-sub"><strong>Search Portal</strong> — the AI RegTech platform I work on at 4CRisk.ai / CUBE — plus Mendix workflow apps at Intelizign and Power Platform solutions for Daimler India Commercial Vehicles. Open any card (or any module) for the full case study.</p>
+                </header>
+
+                <div class="filter-bar reveal" role="tablist" aria-label="Filter projects">
+                    <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all">All <span class="filter-count">6</span></button>
+                    <button class="filter-btn" role="tab" aria-selected="false" data-filter="mendix">Mendix <span class="filter-count">3</span></button>
+                    <button class="filter-btn" role="tab" aria-selected="false" data-filter="powerapps">Power Apps <span class="filter-count">2</span></button>
+                    <button class="filter-btn" role="tab" aria-selected="false" data-filter="powerbi">Power BI <span class="filter-count">1</span></button>
+                    <span class="filter-indicator" aria-hidden="true"></span>
+                </div>
+
+                <div class="projects-grid" id="projects-grid">
+                    <article class="project-card project-flagship spotlight reveal" data-category="mendix" data-project="searchportal">
+                        <div class="flagship-main">
+                            <div class="project-top">
+                                <span class="project-icon"><i class="bx bx-search-alt"></i></span>
+                                <span class="project-company">4CRisk.ai → CUBE · Sep 2025 – Present</span>
+                                <span class="platform-tag regtech">Flagship · AI RegTech</span>
                             </div>
-                            <div class="contact-text">
-                                <h4>Email</h4>
-                                <p>karthikeyanpmbe@gmail.com</p>
-                            </div>
+                            <h3>Search Portal</h3>
+                            <p>4CRisk.ai's AI-driven RegTech platform, now part of CUBE. Compliance teams use it to research regulations, turn them into rule books and obligations, map them to their own controls and policies, and act on regulatory change — all in one multi-tenant SaaS product.</p>
+                            <ul class="flagship-points">
+                                <li><i class="bx bx-check-circle"></i> I build and enhance modules across the whole platform in Mendix</li>
+                                <li><i class="bx bx-check-circle"></i> Integrating proprietary AI / SLM services into product workflows</li>
+                                <li><i class="bx bx-check-circle"></i> Role, organisation and tenant-level security</li>
+                            </ul>
+                            <div class="tag-row"><span class="tag">Mendix</span><span class="tag">AI / SLM services</span><span class="tag">Multi-tenant SaaS</span><span class="tag">REST &amp; JSON</span><span class="tag">Sankey</span></div>
+                            <button class="project-open" type="button" aria-label="Open Search Portal case study">Explore the project &amp; all modules <i class="bx bx-right-arrow-alt"></i></button>
                         </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="bx bx-phone"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Phone</h4>
-                                <p>+91 6380538769</p>
-                            </div>
+                        <div class="module-grid" aria-label="Search Portal modules I've worked on">
+                            <button class="module-tile" type="button" data-module="research">
+                                <i class="bx bx-search-alt"></i><strong>Regulatory Research</strong><span>AI Smart Search across regulators, laws &amp; standards</span>
+                            </button>
+                            <button class="module-tile" type="button" data-module="rulebook">
+                                <i class="bx bx-book-bookmark"></i><strong>Rule Book</strong><span>Pin rules or auto-generate rule books at 3 roll-up levels</span>
+                            </button>
+                            <button class="module-tile" type="button" data-module="obligations">
+                                <i class="bx bx-list-check"></i><strong>Obligations</strong><span>Obligations from rule books, with AI policy / control / risk statements</span>
+                            </button>
+                            <button class="module-tile" type="button" data-module="cmap">
+                                <i class="bx bx-git-repo-forked"></i><strong>Compliance Map</strong><span>Sankey traceability with editable AI mappings &amp; explainability</span>
+                            </button>
+                            <button class="module-tile" type="button" data-module="impact">
+                                <i class="bx bx-pulse"></i><strong>Impact Assessment</strong><span>How new regulations affect rule books, obligations &amp; maps</span>
+                            </button>
+                            <button class="module-tile" type="button" data-module="rcm">
+                                <i class="bx bx-bell"></i><strong>Reg Change Management</strong><span>Alert workflow from Scoping to Completed, with triage</span>
+                            </button>
+                            <button class="module-tile" type="button" data-module="grc">
+                                <i class="bx bx-cloud-upload"></i><strong>GRC Uploads</strong><span>Bulk Excel import &amp; AI-parsed policy PDFs</span>
+                            </button>
+                            <button class="module-tile" type="button" data-module="libraries">
+                                <i class="bx bx-shield-quarter"></i><strong>GRC Libraries</strong><span>Controls, Control Objectives, Policies, Risks, Issues</span>
+                            </button>
+                            <button class="module-tile" type="button" data-module="aria">
+                                <i class="bx bx-bot"></i><strong>Ask ARIA</strong><span>GenAI co-pilot for search, gap recommendations &amp; Q&amp;A</span>
+                            </button>
                         </div>
+                    </article>
+
+                    <article class="project-card spotlight tilt reveal" data-category="mendix" data-project="imanage" data-tilt-max="5">
+                        <div class="project-top">
+                            <span class="project-icon"><i class="bx bx-briefcase-alt-2"></i></span>
+                            <span class="project-company">Intelizign</span>
+                            <span class="platform-tag mendix">Mendix</span>
+                        </div>
+                        <h3>I-Manage</h3>
+                        <p>Project &amp; resource management system to allocate employees to projects and delivery groups, with cost and revenue analysis.</p>
+                        <div class="tag-row"><span class="tag">Microflows</span><span class="tag">ECharts</span><span class="tag">Reporting</span></div>
+                        <button class="project-open" type="button" aria-label="Open I-Manage case study">View case study <i class="bx bx-right-arrow-alt"></i></button>
+                    </article>
+
+                    <article class="project-card spotlight tilt reveal" data-category="mendix" data-project="doa" data-delay="1" data-tilt-max="5">
+                        <div class="project-top">
+                            <span class="project-icon"><i class="bx bx-shield-quarter"></i></span>
+                            <span class="project-company">Intelizign</span>
+                            <span class="platform-tag mendix">Mendix</span>
+                        </div>
+                        <h3>Delegation of Authority</h3>
+                        <p>Approval workflow app for sensitive documents — requests are reviewed by delegated authorities and escalated when needed.</p>
+                        <div class="tag-row"><span class="tag">Workflows</span><span class="tag">Approvals</span><span class="tag">Notifications</span></div>
+                        <button class="project-open" type="button" aria-label="Open Delegation of Authority case study">View case study <i class="bx bx-right-arrow-alt"></i></button>
+                    </article>
+
+                    <article class="project-card spotlight tilt reveal" data-category="powerapps" data-project="npm" data-tilt-max="5">
+                        <div class="project-top">
+                            <span class="project-icon"><i class="bx bx-network-chart"></i></span>
+                            <span class="project-company">DICV · via Intelizign</span>
+                            <span class="platform-tag powerapps">Power Apps</span>
+                        </div>
+                        <h3>NPM Planning Tool</h3>
+                        <p>Network Planning &amp; Maintenance tool for Daimler India Commercial Vehicles that digitises and automates the planning process end to end.</p>
+                        <div class="tag-row"><span class="tag">Canvas app</span><span class="tag">Power Automate</span></div>
+                        <button class="project-open" type="button" aria-label="Open NPM Planning Tool case study">View case study <i class="bx bx-right-arrow-alt"></i></button>
+                    </article>
+
+                    <article class="project-card spotlight tilt reveal" data-category="powerbi" data-project="series" data-delay="1" data-tilt-max="5">
+                        <div class="project-top">
+                            <span class="project-icon"><i class="bx bx-line-chart"></i></span>
+                            <span class="project-company">DICV · via Intelizign</span>
+                            <span class="platform-tag powerbi">Power BI</span>
+                        </div>
+                        <h3>Series Referencing Dashboard</h3>
+                        <p>Interactive Power BI dashboard for Daimler India Commercial Vehicles to analyse and track product series references across data sources.</p>
+                        <div class="tag-row"><span class="tag">DAX</span><span class="tag">Data modelling</span></div>
+                        <button class="project-open" type="button" aria-label="Open Series Referencing Dashboard case study">View case study <i class="bx bx-right-arrow-alt"></i></button>
+                    </article>
+
+                    <article class="project-card spotlight tilt reveal" data-category="powerapps" data-project="orgchart" data-delay="2" data-tilt-max="5">
+                        <div class="project-top">
+                            <span class="project-icon"><i class="bx bx-sitemap"></i></span>
+                            <span class="project-company">DICV · via Intelizign</span>
+                            <span class="platform-tag powerapps">Power Apps</span>
+                        </div>
+                        <h3>CE Org Chart</h3>
+                        <p>Interactive organisational chart for Daimler India Commercial Vehicles showing employee hierarchy and reporting lines.</p>
+                        <div class="tag-row"><span class="tag">Dataverse</span><span class="tag">SharePoint</span></div>
+                        <button class="project-open" type="button" aria-label="Open CE Org Chart case study">View case study <i class="bx bx-right-arrow-alt"></i></button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CERTIFICATIONS ================= -->
+        <section id="certifications" class="section section-alt">
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="section-kicker">06 · certifications</span>
+                    <h2 class="section-title">Certified &amp; <span class="gradient-text">verified</span></h2>
+                    <p class="section-sub">The full Mendix developer path — Rapid, Intermediate and Advanced — plus a Java course certification. Each certificate opens as a PDF.</p>
+                </header>
+
+                <div class="cert-path">
+                    <article class="cert-card spotlight reveal" data-delay="1">
+                        <div class="cert-badge"><img src="assets/img/mendix-rapid-badge.png" alt="Mendix Rapid Developer badge" width="96" height="96" loading="lazy"></div>
+                        <span class="cert-step">Level 1 · Mendix</span>
+                        <h3>Rapid Developer</h3>
+                        <span class="cert-date"><i class="bx bx-calendar"></i> Issued 20 Apr 2022</span>
+                        <div class="cert-actions">
+                            <button class="cert-id" type="button" data-copy="35311" aria-label="Copy certificate number 35311"><span>No.</span> 35311 <i class="bx bx-copy"></i></button>
+                            <a class="cert-view" href="assets/certificates/Mendix-Rapid-Developer-35311.pdf" target="_blank" rel="noopener" aria-label="View Rapid Developer certificate (PDF)"><i class="bx bx-show"></i> View</a>
+                        </div>
+                    </article>
+                    <span class="cert-connector reveal" data-delay="2" aria-hidden="true"></span>
+                    <article class="cert-card spotlight reveal" data-delay="2">
+                        <div class="cert-badge"><img src="assets/img/mendix-intermediate-badge.png" alt="Mendix Intermediate Developer badge" width="96" height="96" loading="lazy"></div>
+                        <span class="cert-step">Level 2 · Mendix</span>
+                        <h3>Intermediate Developer</h3>
+                        <span class="cert-date"><i class="bx bx-calendar"></i> Issued 19 Oct 2022</span>
+                        <div class="cert-actions">
+                            <button class="cert-id" type="button" data-copy="42485" aria-label="Copy certificate number 42485"><span>No.</span> 42485 <i class="bx bx-copy"></i></button>
+                            <a class="cert-view" href="assets/certificates/Mendix-Intermediate-Developer-42485.pdf" target="_blank" rel="noopener" aria-label="View Intermediate Developer certificate (PDF)"><i class="bx bx-show"></i> View</a>
+                        </div>
+                    </article>
+                    <span class="cert-connector reveal" data-delay="3" aria-hidden="true"></span>
+                    <article class="cert-card cert-featured gradient-border spotlight reveal" data-delay="3">
+                        <div class="cert-badge"><img src="assets/img/mendix-advanced-badge.png" alt="Mendix Advanced Developer badge" width="96" height="96" loading="lazy"></div>
+                        <span class="cert-step">Level 3 · Mendix</span>
+                        <h3>Advanced Developer</h3>
+                        <span class="cert-date"><i class="bx bx-calendar"></i> Issued 17 Apr 2023</span>
+                        <div class="cert-actions">
+                            <button class="cert-id" type="button" data-copy="53718" aria-label="Copy certificate number 53718"><span>No.</span> 53718 <i class="bx bx-copy"></i></button>
+                            <a class="cert-view" href="assets/certificates/Mendix-Advanced-Developer-53718.pdf" target="_blank" rel="noopener" aria-label="View Advanced Developer certificate (PDF)"><i class="bx bx-show"></i> View</a>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="cert-subhead reveal">Also certified</p>
+                <article class="cert-wide spotlight reveal">
+                    <div class="cert-badge"><img src="assets/img/java-course-badge.svg" alt="Java course certified badge" width="96" height="96" loading="lazy"></div>
+                    <div class="cert-wide-body">
+                        <span class="cert-step">Course certification · Greens Technology, Chennai</span>
+                        <h3>Java with Selenium &amp; Oracle</h3>
+                        <p>Core Java, test automation with Selenium WebDriver, and Oracle SQL — the foundation behind the Java actions I write in Mendix today.</p>
+                        <div class="tag-row"><span class="tag">Java</span><span class="tag">Selenium</span><span class="tag">Oracle SQL</span></div>
                     </div>
-                    
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/karthikeyan-pm-494761210" target="_blank" class="social-link linkedin">
-                            <i class="bx bxl-linkedin"></i>
+                    <div class="cert-wide-side">
+                        <span class="cert-date"><i class="bx bx-calendar"></i> Oct – Dec 2021</span>
+                        <a class="cert-view" href="assets/certificates/Java-Selenium-Oracle-Greens-Technology.pdf" target="_blank" rel="noopener" aria-label="View Java with Selenium and Oracle certificate (PDF)"><i class="bx bx-show"></i> View certificate</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT ================= -->
+        <section id="contact" class="section">
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="section-kicker">07 · contact</span>
+                    <h2 class="section-title">Let's build <span class="gradient-text">something together</span></h2>
+                    <p class="section-sub">Have a role, a project or a question? I usually reply within a day.</p>
+                </header>
+
+                <div class="contact-grid">
+                    <div class="contact-info reveal">
+                        <button class="contact-card" type="button" data-copy="karthikeyanpmbe@gmail.com" aria-label="Copy email address">
+                            <span class="contact-icon"><i class="bx bx-envelope"></i></span>
+                            <span class="contact-text"><span>Email</span><strong>karthikeyanpmbe@gmail.com</strong></span>
+                            <span class="contact-action"><i class="bx bx-copy"></i></span>
+                        </button>
+                        <a class="contact-card" href="tel:+916380538769">
+                            <span class="contact-icon"><i class="bx bx-phone"></i></span>
+                            <span class="contact-text"><span>Phone</span><strong>+91 63805 38769</strong></span>
+                            <span class="contact-action"><i class="bx bx-right-arrow-alt"></i></span>
                         </a>
-                        <a href="https://wa.me/916380538769" target="_blank" class="social-link whatsapp">
-                            <i class="bx bxl-whatsapp"></i>
+                        <a class="contact-card" href="https://www.linkedin.com/in/karthikeyan-pm-494761210" target="_blank" rel="noopener">
+                            <span class="contact-icon"><i class="bx bxl-linkedin"></i></span>
+                            <span class="contact-text"><span>LinkedIn</span><strong>karthikeyan-pm</strong></span>
+                            <span class="contact-action"><i class="bx bx-link-external"></i></span>
                         </a>
+                        <div class="contact-card static">
+                            <span class="contact-icon"><i class="bx bx-time-five"></i></span>
+                            <span class="contact-text"><span>Local time · Bangalore</span><strong id="local-time">IST (UTC+5:30)</strong></span>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="contact-form-container" data-aos="fade-left">
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
-                            <span class="error-message" id="name-error"></span>
+
+                    <form id="contact-form" class="contact-form spotlight reveal" data-delay="1" novalidate>
+                        <!-- Honeypot: hidden from people, bots fill it in -->
+                        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                        <div class="form-row">
+                            <div class="field">
+                                <input type="text" id="name" name="name" placeholder=" " autocomplete="name" required maxlength="80">
+                                <label for="name">Your name</label>
+                                <span class="field-error" id="name-error" role="alert"></span>
+                            </div>
+                            <div class="field">
+                                <input type="email" id="email" name="email" placeholder=" " autocomplete="email" required maxlength="120">
+                                <label for="email">Email address</label>
+                                <span class="field-error" id="email-error" role="alert"></span>
+                            </div>
                         </div>
-                        
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
-                            <span class="error-message" id="email-error"></span>
+                        <div class="field">
+                            <input type="text" id="subject" name="subject" placeholder=" " maxlength="120">
+                            <label for="subject">Subject (optional)</label>
                         </div>
-                        
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Enter Your Subject">
+                        <div class="field">
+                            <textarea id="message" name="message" placeholder=" " rows="5" required maxlength="1000"></textarea>
+                            <label for="message">Your message</label>
+                            <span class="field-error" id="message-error" role="alert"></span>
+                            <span class="char-count" id="char-count">0 / 1000</span>
                         </div>
-                        
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Enter Your Message" required></textarea>
-                            <span class="error-message" id="message-error"></span>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary magnetic" data-channel="email" id="send-email">
+                                <span class="btn-label"><i class="bx bx-send"></i> Send message</span>
+                                <span class="btn-spinner" aria-hidden="true"></span>
+                            </button>
+                            <button type="submit" class="btn btn-ghost" data-channel="whatsapp">
+                                <i class="bx bxl-whatsapp"></i> Send via WhatsApp
+                            </button>
                         </div>
-                        
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <p class="form-note"><i class="bx bx-lock-alt"></i> Your details are only used to reply to you.</p>
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
+    <!-- ================= FOOTER ================= -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Developed by <span class="gradient-text">Karthikeyan P M</span>. All rights reserved.</p>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#home" class="brand">
+                    <img src="assets/img/mendix-advanced-badge.png" alt="" class="brand-badge" width="40" height="40" loading="lazy">
+                    <span class="brand-text"><span class="brand-name">Karthikeyan<span class="accent"> P M</span></span><span class="brand-role">Software Engineer</span></span>
+                </a>
+                <p>Software Engineer at CUBE, building AI-powered RegTech on Mendix. Previously Intelizign &amp; DICV.</p>
+            </div>
+            <nav class="footer-links" aria-label="Footer">
+                <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a>
+            </nav>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/karthikeyan-pm-494761210" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://wa.me/916380538769" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+                <a href="mailto:karthikeyanpmbe@gmail.com" class="social-link" aria-label="Email"><i class="bx bx-envelope"></i></a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span id="year">2026</span> Karthikeyan P M. All rights reserved.</p>
+            <p class="mono">Built with HTML, CSS &amp; vanilla JS · Press <kbd><span class="kbd-mod">Ctrl</span> K</kbd> to navigate</p>
         </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
-    <button id="scroll-to-top" class="scroll-to-top">
+    <!-- Back to top with scroll-progress ring -->
+    <button class="to-top" id="to-top" type="button" aria-label="Back to top">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="21" class="ring-bg"/><circle cx="24" cy="24" r="21" class="ring-fg" id="to-top-ring"/></svg>
         <i class="bx bx-up-arrow-alt"></i>
     </button>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="script.js"></script>
+    <!-- Project case-study modal -->
+    <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-backdrop" data-close></div>
+        <div class="modal-panel" role="document">
+            <button class="modal-close icon-btn" type="button" data-close aria-label="Close case study"><i class="bx bx-x"></i></button>
+            <div class="modal-content" id="modal-content"></div>
+            <div class="modal-nav">
+                <button class="btn btn-ghost btn-sm" type="button" id="modal-prev"><i class="bx bx-left-arrow-alt"></i> Previous</button>
+                <button class="btn btn-ghost btn-sm" type="button" id="modal-next">Next <i class="bx bx-right-arrow-alt"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Command palette (Ctrl/Cmd + K) -->
+    <div class="palette" id="palette" role="dialog" aria-modal="true" aria-label="Command palette" hidden>
+        <div class="palette-backdrop" data-close></div>
+        <div class="palette-panel">
+            <div class="palette-search">
+                <i class="bx bx-search"></i>
+                <input type="text" id="palette-input" placeholder="Type a command or search…" autocomplete="off" aria-controls="palette-list" aria-autocomplete="list">
+                <kbd>Esc</kbd>
+            </div>
+            <ul class="palette-list" id="palette-list" role="listbox"></ul>
+            <div class="palette-foot"><span><kbd>↑</kbd><kbd>↓</kbd> navigate</span><span><kbd>↵</kbd> select</span></div>
+        </div>
+    </div>
+
+    <!-- Toasts -->
+    <div class="toast-stack" id="toast-stack" aria-live="polite" aria-atomic="true"></div>
+
+    <noscript><style>.reveal{opacity:1!important;transform:none!important}.preloader{display:none!important}</style></noscript>
+    <script src="script.js" defer></script>
+    <script src="scene3d.js" defer></script>
 </body>
 </html>
