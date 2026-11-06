@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://karthikeyangitup.github.io/Portfolio/sitemap.xml
