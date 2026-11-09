@@ -457,7 +457,7 @@ kbd {
 .fc-icon.pa { background: linear-gradient(135deg, #742774, #b4009e); }
 .fc-icon.bi { background: linear-gradient(135deg, #f2c811, #e8a400); color: #1f1300; }
 .fc-1 { top: 2%; left: -18%; }
-.fc-2 { top: 46%; right: -32%; animation-delay: -2s; }
+.fc-2 { top: 46%; right: -36%; animation-delay: -2s; }
 .fc-3 { bottom: 0; left: -12%; animation-delay: -4s; }
 @keyframes bob { 50% { translate: 0 -10px; } }
 
